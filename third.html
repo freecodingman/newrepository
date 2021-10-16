@@ -1,0 +1,163 @@
+<html>
+<head>
+<title>CONTACT ME</title>
+<link rel="stylesheet" href="design3.css">
+<style type="text/css">
+#btn{
+    background-color:gold;
+    color:red;
+    font-size:20px;
+    border-radius:0px 50px;
+}
+#btn:hover{
+    background-color:blue;
+}
+span{
+    color:red;
+    font-size:18px;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            
+            <ul>
+                <li><a href="index.html">HOME<a></li>
+                <li><a href="first.html">QUALIFICATION<a></li>
+                <li><a href="second.html">QUALITY<a></li>
+                <li><a href="index.html">CONTACT ME<a></li>
+                
+            
+            </ul>
+            
+        </div>
+        <div class="text"><h1>Contact Me</h1></div>
+    <div class="form">
+       <form action="#" autocomplete="off" onsubmit="return validation()">
+      <center> <table cellspacing="15" ></center>
+            <tr><td> <input type="text" id="user" placeholder="UserName" align="center">
+                 <br><span id="userr"></span>
+            </td></tr>
+             <tr>
+                <td>
+                    <input type="Password" id="pass" placeholder="Password">
+                    <br><span id="passs"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="Password" id="conpass" placeholder="Confirm Password">
+                    <br><span id="conpasss"></span>
+                </td>
+             </tr>
+            <tr>
+                <td>
+                    <input type="text" id="email" placeholder="Email">
+                    <br><span id="emaill"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="mobile" placeholder="Mobile">
+                    <br><span id="mobilee"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" id="btn" placeholder="">
+                </td>
+            </tr>
+
+
+       
+       
+       </table>
+       
+       </form>
+    </div>
+    </div>
+<script type="text/javascript">
+    function validation(){
+        var user= document.getElementById('user').value;
+        var pass= document.getElementById('pass').value;
+        var conpass= document.getElementById('conpass').value;
+        var email= document.getElementById('email').value;
+        var mobile= document.getElementById('mobile').value;
+        
+       
+            if(user == "")
+            {
+                document.getElementById('userr').innerHTML="**Please write user name**";
+                return false;
+            }
+            if(user.length<3)
+            {
+                document.getElementById('userr').innerHTML="**Please write user name more than 3 character**";
+                return false;
+            }
+             if(user.length>20)
+            {
+                document.getElementById('userr').innerHTML="**Please write user name less than 20 character**";
+                return false;
+            }
+           
+            if(pass == "")
+            {
+                document.getElementById('passs').innerHTML="**Please write password**";
+                return false;
+            }
+            if(pass.length<5){
+                document.getElementById('passs').innerHTML="**Password length must be gretaer then 5 character**";
+                return false;
+
+            }
+            if(pass.length>25){
+                document.getElementById('passs').innerHTML="**Password length not be greater than 25 character**";
+                return false;
+
+            }
+            if(conpass == "")
+            {
+                document.getElementById('conpasss').innerHTML="**Please write password**";
+            }
+            if(email == "")
+            {
+                document.getElementById('emaill').innerHTML="**Please write email**";
+            }
+            if(email.length<5){
+                document.getElementById('emaill').innerHTML="**email id length must be gretaer then 5 character**";
+                return false;
+
+            }
+            if(email.length>25){
+                document.getElementById('emaill').innerHTML="**email id length not be greater than 25 character**";
+                return false;
+
+            }
+            
+
+            if(pass!=conpass){
+                 document.getElementById('passs').innerHTML="**Password are not same**";
+                return false;
+
+            }
+            if(mobile == "")
+            {
+                document.getElementById('mobilee').innerHTML="**Please write mobile number**";
+            }
+            if(mobile.length!=10)
+            {
+                document.getElementById('mobilee').innerHTML="**Please write 10 digit mobile number**";
+                return false;
+            }
+    }
+
+</script>
+
+
+</body>
+
+
+
+</html>
